@@ -9,6 +9,14 @@
   </head>
 
   <body>
+  <!--
+you can use link_to for the items in the routes path.
+-->
+
+	<%= link_to "Home", root_path %>
+	<%= link_to "About", about_path %>
+	<%= link_to "Contact Us", contactus_path %>
+
     <%= yield %>
   </body>
 </html>
