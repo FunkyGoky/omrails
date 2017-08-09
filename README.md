@@ -1,5 +1,7 @@
 # README
 
+The program helps tax professionals to complete tax returns with ease esp. if they are working on a big engagement and with many individuals in the team. It will include some features (I am still considering what they should be....)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
