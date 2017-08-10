@@ -8,12 +8,15 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+ruby 2.4.0
 
 * System dependencies
+The development is based on OX 10.12.5
 
 * Configuration
 
 * Database creation
+Database: 
 
 * Database initialization
 
