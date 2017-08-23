@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+    before_action :authenticate_user!, except: [:index, :show]
 
   # GET /tweets
   def index
@@ -20,7 +21,7 @@ class TweetsController < ApplicationController
     @tweet = current_user.tweets.find(params[:id])
   end
 
-  # POST /tweets
+  # POST /tƒweets
   def create
     @tweet = current_user.tweets.new(tweet_params)
     if @tweet.save
@@ -44,14 +45,10 @@ class TweetsController < ApplicationController
   def destroy
     @tweet = current_user.tweets.find(params[:id])
     @tweet.destroy
-    respond_to do |format|
-      format.html { redirect_to tweets_url, notice: 'Tweet was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+      redirect_to tweets_url, notice: 'Tweet was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params

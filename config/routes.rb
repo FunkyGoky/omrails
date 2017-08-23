@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :items
   resources :user_comments
   resources :tweets
   devise_for :admin_users, ActiveAdmin::Devise.config
