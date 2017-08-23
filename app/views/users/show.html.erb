@@ -5,18 +5,14 @@
     <div class="col-md-4">     
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title">Your Account</h4>
+          <h4 class="card-title"><%= @user.username %></h4>
           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
+          <p class="card-text"><%= @user.name %></p>
         </div>
       </div>
     </div>
 
     <div class="col-md-8">
-      <% if user_signed_in? %>
-        <%= link_to 'New Tweet', new_tweet_path %>
-      <% end %>
-
       <div class="list-group">
         <% @tweets.each do |tweet| %> 
           <%= link_to tweet, class: "list-group-item list-group-item-action flex-column align-items-start" do %>
